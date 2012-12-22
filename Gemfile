@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'annotate'
 
 group :development do
   gem 'guard'
