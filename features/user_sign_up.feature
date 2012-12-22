@@ -17,7 +17,3 @@ Feature: User Sign up
       Scenario: Sign up with invalid email 
         When I sign up with invalid email
         Then I should see an invalid email message
-
-      Scenario: Sign up with invalid password
-        When I sign up with invalid password
-        Then I should see an invalid password
