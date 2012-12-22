@@ -8,3 +8,5 @@ Feature: Home Page
     When I visit the home page
     Then I see a "About Us" link
     And I see a "Contact Us" link
+    And I see a "Sign up" link
+    And I see a "Sign in" link

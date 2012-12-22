@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'devise'
 
 group :test do
   gem "cucumber-rails"
@@ -28,6 +29,8 @@ group :test do
   gem "capybara",           ">= 1.1.3"
   gem "database_cleaner"
 end
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
