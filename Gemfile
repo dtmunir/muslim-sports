@@ -23,6 +23,13 @@ end
 gem 'jquery-rails'
 gem 'devise'
 
+group :development do
+  gem 'guard'
+  gem "guard-cucumber"
+  gem "spork",              ">= 0.9.0rc"
+  gem "guard-spork"
+end
+
 group :test do
   gem "cucumber-rails"
   gem "rspec-rails"
