@@ -2,13 +2,13 @@ development:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: help@1docway.com
-  :password: fooBar!23
+  :user_name: chuuchuu786@gmail.com
+  :password: chuuchuu
   :enable_starttls_auto: true
 production:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: help@1docway.com
-  :password: fooBar!23
+  :user_name: chuuchuu786@gmail.com
+  :password: chuuchuu
   :enable_starttls_auto: true
