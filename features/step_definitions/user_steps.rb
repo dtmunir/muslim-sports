@@ -21,7 +21,7 @@ When /^I sign up with valid user data$/ do
 end
 
 Then /^I should see a successful sign up message$/ do
-  page.should have_content "Welcome! You have signed up successfully."
+  page.should have_content "A message with a confirmation link has been sent to your email address"
 
 end
 
