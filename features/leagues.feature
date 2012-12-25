@@ -3,23 +3,30 @@ Feature: View and Create leagues
   A user should be able to view existing leagues
   And create new leagues
   
-
-  Scenario: Viewing Existing leagues
+  Background:
     Given the following Leagues exist
       | name                | sport   |
       | Karachi Kangaros    | Cricket |
       | Lahore Lions        | Cricket |     
     When I visits the league page
-    And I click "Karachi Kangaros"
-    Then I should see "Cricket"
 
-  Scenario: Creating a new league
-    When I visit the league page
-    And I click "New League"
-    And I create the following league
-      | name                | sport   |
-      | Islamabad Eagles    | Cricket |
-    And I visit the league page
-    Then I should see "Islamabad Eagles"
+    Scenario: Viewing Existing leagues
+      And I click "Karachi Kangaros"
+      Then I should see "Cricket"
+
+    Scenario: Creating a new league
+      And I click "New League"
+      And I create the following league
+        | name                | sport   |
+        | Islamabad Eagles    | Cricket |
+      And I visit the league page
+      Then I should see "Islamabad Eagles"
+
+
+    Scenario: Edit a league
+      And I click "Karachi Kangaros"
+      And I change the name to "Karachi Kangaroos"
+      And I visit the league page
+      Then I should see "Karachi Kangaroos"
 
 

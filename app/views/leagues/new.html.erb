@@ -1,2 +1,12 @@
 <h1>Leagues#new</h1>
 <p>Find me in app/views/leagues/new.html.erb</p>
+
+<%= form_for @league, :html => {:class => "nifty_form"} do |f| %>
+  <p><%= f.label :name %> </p>
+  <%= f.text_field :name %>
+  <p><%= f.label :sport %></p>
+  <%= f.text_field :sport %>
+  <p><%= f.label :description %></p>
+  <%= f.text_area :description, :size => "60x12" %>
+  <p><%= f.submit %></p>
+<% end %>

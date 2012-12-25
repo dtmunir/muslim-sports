@@ -5,9 +5,21 @@ class LeaguesController < ApplicationController
   end
 
   def new
+    @league = League.new
+
   end
 
   def create
+    puts params
+    @league = League.new(params[:league])
+    if @league.save 
+       ##do something
+       flash[:notice] = "League successfully created..."
+       redirect_to @league
+    else
+       render "new"
+    end
+
   end
 
   def edit
