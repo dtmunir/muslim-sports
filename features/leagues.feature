@@ -8,14 +8,14 @@ Feature: View and Create leagues
       | name                | sport   |
       | Karachi Kangaros    | Cricket |
       | Lahore Lions        | Cricket |     
-    When I visits the league page
+    When I visit the league page
 
     Scenario: Viewing Existing leagues
       And I click "Karachi Kangaros"
       Then I should see "Cricket"
 
     Scenario: Creating a new league
-      And I click "New League"
+      And I click "New league"
       And I create the following league
         | name                | sport   |
         | Islamabad Eagles    | Cricket |

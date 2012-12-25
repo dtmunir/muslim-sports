@@ -5,7 +5,7 @@ Given /^the following Leagues exist$/ do |table|
   end
 end
 
-When /^I visits the league page$/ do
+When /^I visit the league page$/ do
   visit "/leagues"
 end
 
@@ -15,4 +15,15 @@ end
 
 Then /^I should see "(.*?)"$/ do |text|
   page.should have_content text
+end
+
+When /^I create the following league$/ do |table|
+	table.hashes.each do |attributes|
+    League.create!(attributes)
+  end
+ end
+
+
+When /^I change the name to "(.*?)"$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
 end
