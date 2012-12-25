@@ -10,3 +10,4 @@ Feature: Home Page
     And I see a "Contact Us" link
     And I see a "Sign up" link
     And I see a "Login" link
+    And I see a "Leagues" link

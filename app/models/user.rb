@@ -31,4 +31,31 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+
+  has_and_belongs_to_many :leagues
+
+  def to_s
+    "#{self.email}"
+  end
 end
+
+
+
+# User
+
+# user_id | email   | password | confirmed_at | league
+# iq@gmail 
+
+# League
+# league_id | name |  sport
+
+
+# User_Leagues 
+# user_id | league_id
+# 1           1
+# 1           2
+# 2           3
+# 3           3
+
+
+

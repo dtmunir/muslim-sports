@@ -1,4 +1,8 @@
 MuslimSports::Application.routes.draw do
+  
+ resources :leagues
+
+
   devise_for :users
 
   get "home/index"
