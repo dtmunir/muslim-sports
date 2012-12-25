@@ -1,6 +1,5 @@
-<h1>Leagues#index</h1>
-<p>Find me in app/views/leagues/index.html.erb</p>
-<table class="leagues">
+<h1>Leagues</h1>
+<table class="leagues table table-hover">
     <thead>
         <td>Name</td>
         <td>Sport</td>
@@ -11,6 +10,7 @@
     <td><%= l.sport %></td>
   </tr>
 <% end %>
+
 </table>
 
-<p><%= link_to "New league", new_league_path =%></p>
+<p><%= link_to "New league", new_league_path, :class => "btn btn-primary" =%></p>
