@@ -1,26 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<a href="/leagues">Leagues</a>
-<a>About Us</a>
-<a>Contact Us</a>
+<h1>Muslim? Play sports? You've come to the right place.</h1>
+<p></p>
 
-
+<ul class="inline-block" style ="list-style: none;">
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Edit registration', edit_user_registration_path) %>
+  <%= link_to('Edit registration', edit_user_registration_path, :class => "btn") =%>
   </li>
 <% else %>
   <li>
-  <%= link_to('Sign up', new_user_registration_path)  %>
+  <%= link_to('Sign up', new_user_registration_path, :class => "btn btn-primary")  =%>
   </li>
 <% end %>
 
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn") =%>        
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>  
+  <%= link_to('Login', new_user_session_path, :class => "btn btn-primary" )  =%>  
   </li>
 <% end %>
+</ul>
