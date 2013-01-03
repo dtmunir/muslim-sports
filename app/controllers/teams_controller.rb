@@ -4,9 +4,18 @@ class TeamsController < ApplicationController
   end
 
   def new
+    @team = Team.new
   end
 
   def create
+    puts params
+    @team = Team.new(params[:team])
+    if @team.save
+      flash[:notice] = "Team succesfully created..."
+      redirect_to @team
+    else
+      render "new"
+    end
   end
 
   def edit
@@ -19,5 +28,6 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @team = Team.find(params[:id])
   end
 end

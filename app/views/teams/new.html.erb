@@ -1,2 +1,29 @@
-<h1>Teams#new</h1>
-<p>Find me in app/views/teams/new.html.erb</p>
+<h2>Create a new team</h2>
+
+<%= form_for @team, :html => {:class => "ntify_form form-horizontal"} do |f| %>
+
+  <%= render "shared/error_messages", :target => @team %>
+  <div class="control-group">
+  	<%= f.label :name, :class =>  "control-label" %>
+  	<div class="controlls">
+  		<%= f.text_field :name, :class => "input-xlarge" %>
+  	</div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sport, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :sport, :class => "input-xlarge"  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :description, :class => "input-xlarge" , :size => "60x12" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit 'Create', :class => "btn" %>
+    </div>
+  </div>
+<% end %>
