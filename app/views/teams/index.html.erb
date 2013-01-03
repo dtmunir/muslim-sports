@@ -1,0 +1,16 @@
+<h1>Teams#index</h1>
+<table class="leagues table table-hover">
+    <thead>
+        <td>Name</td>
+        <td>Sport</td>
+    </thead>
+<% @teams.each do |l| %>
+  <tr>
+    <td><%= link_to l.name, l  %></td>
+    <td><%= l.sport %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<p><%= link_to "New team", new_team_path, :class => "btn btn-primary" =%></p>

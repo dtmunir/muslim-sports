@@ -1,5 +1,9 @@
 MuslimSports::Application.routes.draw do
   
+
+ resources :teams
+
+
  resources :leagues
 
 
