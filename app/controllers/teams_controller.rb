@@ -19,6 +19,9 @@ class TeamsController < ApplicationController
   end
 
   def edit
+    @team = Team.find(params[:id])
+    @post.user = current_user
+    
   end
 
   def update
