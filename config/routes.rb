@@ -2,7 +2,7 @@ MuslimSports::Application.routes.draw do
   
 
  resources :teams
-
+   post "teams/addToUser"
 
  resources :leagues
 

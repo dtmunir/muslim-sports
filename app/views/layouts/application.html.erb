@@ -35,7 +35,6 @@
     <%= favicon_link_tag 'images/favicon.ico', :rel => 'shortcut icon' %>
   </head>
   <body>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -51,14 +50,13 @@
               <li><%= link_to "Teams", teams_path  %></li>
               <li><%= link_to "Contact Us", "/home/contact"  %></li>
               <li><%= link_to "About Us", "/home/about"  %></li>
-              <% if user_signed_in? %>
-                <li>
-                <%= link_to('Logout', destroy_user_session_path, :method => :delete,) =%>        
-                </li>
-              <% else %>
-                <li>
-                <%= link_to('Login', new_user_session_path)  =%>  </li>
-              <% end %> 
+              <li> 
+                <% if user_signed_in? %>
+                  <%= link_to("Logout: #{user_info}", destroy_user_session_path, :method => :delete,) =%>        
+                <% else %>
+                  <%= link_to('Login', new_user_session_path)  =%>
+                <% end %> 
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -84,12 +82,12 @@
         </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Muslim League 2012</p>
       </footer>
 
     </div> <!-- /container -->
 
-    <!-- Javascripts
+       <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>

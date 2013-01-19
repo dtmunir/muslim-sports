@@ -20,8 +20,7 @@ class TeamsController < ApplicationController
 
   def edit
     @team = Team.find(params[:id])
-    @post.user = current_user
-    
+        
   end
 
   def update
@@ -33,5 +32,14 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @test1 = user_signed_in? ? current_user.id : "Not signed in" 
+    @dummy1 = @team.users
+
+  end
+
+  def addToUser
+    @team = Team.find(params[:id])
+    @team.users << current_user
+
+    render "show"
   end
 end
