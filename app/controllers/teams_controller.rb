@@ -32,5 +32,6 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    @test1 = user_signed_in? ? current_user.id : "Not signed in" 
   end
 end

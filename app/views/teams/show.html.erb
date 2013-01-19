@@ -1,6 +1,7 @@
 <h1><%= @team.name %></h1>
 <h2><%= @team.sport %></h2>
 <h3><%= @team.description %></h3>
+    <td>Current User: <%= @test1 %></td>
     <td><%= link_to " + ", edit_team_path, { :class => "btn" } =%></td>
     <td><%= link_to " - ", new_team_path, :class => "btn" =%></td>
     <br>
