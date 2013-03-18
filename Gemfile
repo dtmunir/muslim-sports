@@ -5,7 +5,6 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -25,8 +24,10 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'annotate'
 gem 'factory_girl'
+gem 'linkedin'
 
 group :development do
+  gem 'sqlite3'
   gem 'guard'
   gem "guard-cucumber"
   gem "spork",              ">= 0.9.0rc"
@@ -40,7 +41,9 @@ group :test do
   gem "database_cleaner"
 end
 
-
+group :production do
+  gem 'pg'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
