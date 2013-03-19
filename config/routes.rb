@@ -3,7 +3,7 @@ MuslimSports::Application.routes.draw do
 
  resources :teams
 
-
+ # resources :auth
  resources :leagues
 
 
@@ -14,6 +14,8 @@ MuslimSports::Application.routes.draw do
   get "home/about"
 
   get "home/contact"
+
+  get "auth/callback"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -66,6 +68,7 @@ MuslimSports::Application.routes.draw do
   # just rememberrake d to delete public/index.html.
    root :to => 'home#index'
    match "/auth" => "auth#index"
+   match "/auth/callback" => "auth#callback"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

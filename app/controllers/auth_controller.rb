@@ -19,10 +19,10 @@ class AuthController < ApplicationController
 
 	def index
 		client = LinkedIn::Client.new('zyhuitz6ja4c','J06bDoyLwvD1FaEV')
-		request_token = client.request_token(:oath_callback => "http://#{request.host_with_port}/auth/callback")
+		request_token = client.request_token(:oauth_callback => "http://#{request.host_with_port}/auth/callback")
 		session[:rtoken] = request_token.token
 	    session[:rsecret] = request_token.secret
-		redirect_to client.request_token.authorize_url
+		redirect_to client.request_token.authorize_url # + "&redirect_uri="+URI::escape("http://#{request.host_with_port}/auth/callback")
 	end
 
 	def callback
@@ -34,6 +34,7 @@ class AuthController < ApplicationController
 			client.authorize_from_access(session[:atoken],session[:asecret])
 		end
 		@profile = client.profile
-		@connections = client.connections
+		@test = "test"
+		# @connections = client.connections
 	end
 end
